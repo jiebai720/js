@@ -1,0 +1,46 @@
+<html>
+
+
+<body>
+
+<button type="button"  >aaa</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button"  >bbb</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button"  >ccc</button>&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+
+<script type="text/javascript">
+	
+	var add_the_handlers = function(nodes){
+	
+		var helper = function(i){
+			return function (e){
+				alert(i);
+			};
+		};
+		var i;
+		for(i=0; i < nodes.length; i+=1){
+			nodes[i].onclick = helper(i);
+		}
+	};
+	
+	var add_the_handlers2 = function(nodes){
+	 
+		var i;
+		for(i=0; i < nodes.length; i+=1){
+			nodes[i].onclick = function(i){
+				return function (e){
+					alert(i);
+				};
+			};
+		}
+	};
+	
+	btn_nodes = document.getElementsByTagName("button");
+	add_the_handlers(btn_nodes);
+</script>
+
+
+</body>
+
+</html>
