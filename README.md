@@ -1,5 +1,5 @@
 # js
-记录一些js的学习demo，书：JavaScript语言精粹
+《JavaScript语言精粹》读书笔记，记录一些js的学习demo
 
 JavaScript中的函数是根据词法来划分作用域的，而不是动态划分作用域的
 
